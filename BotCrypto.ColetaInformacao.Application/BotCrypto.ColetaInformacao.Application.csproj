@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BotCrypto.ColetaInformacao.Data\BotCrypto.ColetaInformacao.Data.csproj" />
+    <ProjectReference Include="..\BotCrypto.ColetaInformacao.Domain\BotCrypto.ColetaInformacao.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>
