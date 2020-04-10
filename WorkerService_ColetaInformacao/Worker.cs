@@ -1,4 +1,5 @@
 using BotCrypto.ColetaInformacao.Application.Services;
+using BotCrypto.ColetaInformacao.Domain;
 using BotCrypto.ColetaInformacao.Domain.Enum;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -25,7 +26,8 @@ namespace WorkerService_ColetaInformacao
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
-                await _tickerAppService.getTicker(TipoMoeda.BCH);
+                Ticker bch = await _tickerAppService.getTicker(TipoMoeda.BCH);
+                Ticker ltc = await _tickerAppService.getTicker(TipoMoeda.LTC);
 
                 await Task.Delay(1000, stoppingToken);
             }

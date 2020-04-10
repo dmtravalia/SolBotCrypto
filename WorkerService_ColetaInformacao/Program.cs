@@ -24,16 +24,13 @@ namespace WorkerService_ColetaInformacao
 
                     services.AddHostedService<Worker>();
 
-                    string c = configuration.GetConnectionString("DefaultConnection");
-
                     services.AddDbContext<ColetaInformacaoContext>(options => options.UseMySql(configuration.GetConnectionString("DefaultConnection")));
 
                     //ColetaInformacao                    
                     services.AddTransient<ITickerService, TickerService>();
                     services.AddTransient<ITickerAppService, TickerAppService>();
                     services.AddTransient<ITickerRepository, TickerRepository>();
-                    services.AddScoped<ColetaInformacaoContext>();
-                    
+                    services.AddTransient<ColetaInformacaoContext>();
 
                 });
     }

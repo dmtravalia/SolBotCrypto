@@ -9,10 +9,10 @@ namespace BotCrypto.ColetaInformacao.Application.Services
         private readonly ITickerRepository _tickerRepository;
         private readonly ITickerService _tickerService;
 
-        public TickerAppService(ITickerService tickerService, ITickerRepository tickerRepository)
+        public TickerAppService(ITickerService tickerService)//, ITickerRepository tickerRepository)
         {
-            _tickerRepository = tickerRepository;
-            _tickerService = tickerService;            
+            //_tickerRepository = tickerRepository;
+            _tickerService = tickerService;
         }
 
         public void Dispose()
