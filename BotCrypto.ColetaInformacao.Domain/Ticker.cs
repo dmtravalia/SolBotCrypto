@@ -1,8 +1,7 @@
-﻿using BotCrypto.Core.DomainObjects;
+﻿using BotCrypto.ColetaInformacao.Domain.Enum;
+using BotCrypto.Core.DomainObjects;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 
 namespace BotCrypto.ColetaInformacao.Domain
 {
@@ -11,6 +10,8 @@ namespace BotCrypto.ColetaInformacao.Domain
         [Description("Data e hora da criação do registro.")]
         public DateTime dtCriacao { get; set; }
 
+        [Description("Tipo da Moeda.")]
+        public TipoMoeda TipoMoeda { get; set; }
 
         [Description("Maior preço de oferta de compra das últimas 24 horas.")]
         public double buy { get; set; }
