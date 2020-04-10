@@ -7,9 +7,6 @@ namespace BotCrypto.ColetaInformacao.Domain
 {
     public class Ticker : Entity, IAggregateRoot
     {
-        [Description("Data e hora da criação do registro.")]
-        public DateTime dtCriacao { get; set; }
-
         [Description("Tipo da Moeda.")]
         public TipoMoeda TipoMoeda { get; set; }
 

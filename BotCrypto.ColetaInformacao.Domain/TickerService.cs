@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace BotCrypto.ColetaInformacao.Domain
 {
@@ -15,7 +16,7 @@ namespace BotCrypto.ColetaInformacao.Domain
             throw new NotImplementedException();
         }
 
-        public Ticker getTicker(TipoMoeda moeda)
+        public async Task<Ticker> getTicker(TipoMoeda moeda)
         {
             Ticker ticker;
             var requisicaoWeb = WebRequest.CreateHttp("https://www.mercadobitcoin.net/api/" + moeda.ToString() + "/ticker/");

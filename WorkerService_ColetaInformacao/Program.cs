@@ -2,6 +2,8 @@ using BotCrypto.ColetaInformacao.Application.Services;
 using BotCrypto.ColetaInformacao.Data;
 using BotCrypto.ColetaInformacao.Data.Repository;
 using BotCrypto.ColetaInformacao.Domain;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -18,13 +20,18 @@ namespace WorkerService_ColetaInformacao
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    IConfiguration configuration = hostContext.Configuration;
+
                     services.AddHostedService<Worker>();
 
-                    // Catalogo
-                    services.AddScoped<ITickerRepository, TickerRepository>();
-                    services.AddScoped<ITickerService, TickerService>();
-                    services.AddScoped<ITickerAppService, TickerAppService>();
+                    services.AddDbContext<ColetaInformacaoContext>(options => options.UseMySql(configuration.GetConnectionString("DefaultConnection")));
+
+                    //ColetaInformacao                    
+                    services.AddTransient<ITickerService, TickerService>();
+                    services.AddTransient<ITickerAppService, TickerAppService>();
+                    services.AddTransient<ITickerRepository, TickerRepository>();
                     services.AddScoped<ColetaInformacaoContext>();
+                    
 
                 });
     }

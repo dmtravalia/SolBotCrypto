@@ -6,9 +6,6 @@ namespace BotCrypto.ColetaInformacao.Application.ViewModels
 {
     public class TickerViewModel
     {
-        [Description("Data e hora da criação do registro.")]
-        public DateTime dtCriacao { get; set; }
-
         [Description("Tipo da Moeda.")]
         public TipoMoeda TipoMoeda { get; set; }
 
