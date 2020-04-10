@@ -24,6 +24,8 @@ namespace WorkerService_ColetaInformacao
 
                     services.AddHostedService<Worker>();
 
+                    string c = configuration.GetConnectionString("DefaultConnection");
+
                     services.AddDbContext<ColetaInformacaoContext>(options => options.UseMySql(configuration.GetConnectionString("DefaultConnection")));
 
                     //ColetaInformacao                    

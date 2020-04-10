@@ -6,6 +6,9 @@
         "DOTNET_ENVIRONMENT": "Development"
       }
     },
+    "WorkerService_ColetaInformacaoProduction": {
+      "commandName": "Project"
+    },
     "Docker": {
       "commandName": "Docker"
     }
