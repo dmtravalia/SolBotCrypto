@@ -13,17 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ColetaInformacao", "ColetaI
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EEFCE1B5-A3DE-4841-84CD-552CAEE3918D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotCrypto.ColetaInformacao.Application", "BotCrypto.ColetaInformacao.Application\BotCrypto.ColetaInformacao.Application.csproj", "{0BBE5924-C983-47BD-97F8-167FCA35CABD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotCrypto.ColetaInformacao.Application", "BotCrypto.ColetaInformacao.Application\BotCrypto.ColetaInformacao.Application.csproj", "{0BBE5924-C983-47BD-97F8-167FCA35CABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotCrypto.ColetaInformacao.Data", "BotCrypto.ColetaInformacao.Data\BotCrypto.ColetaInformacao.Data.csproj", "{D530C7BE-CAD5-440A-8610-759CBCD9B8D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotCrypto.ColetaInformacao.Data", "BotCrypto.ColetaInformacao.Data\BotCrypto.ColetaInformacao.Data.csproj", "{D530C7BE-CAD5-440A-8610-759CBCD9B8D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotCrypto.ColetaInformacao.Domain", "BotCrypto.ColetaInformacao.Domain\BotCrypto.ColetaInformacao.Domain.csproj", "{75DD7FC5-1644-4132-8174-FA5C57FC133D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotCrypto.ColetaInformacao.Domain", "BotCrypto.ColetaInformacao.Domain\BotCrypto.ColetaInformacao.Domain.csproj", "{75DD7FC5-1644-4132-8174-FA5C57FC133D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{58DF61C7-D2FF-4B43-B0DD-67F39FDD1E62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSourcing", "EventSourcing\EventSourcing.csproj", "{1EDE1208-9DDB-4C51-AA63-EFBAB6A0555E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing", "EventSourcing\EventSourcing.csproj", "{1EDE1208-9DDB-4C51-AA63-EFBAB6A0555E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotCrypto.Core", "BotCrypto.Core\BotCrypto.Core.csproj", "{43785807-DD49-4354-BF23-D4547C68581C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotCrypto.Core", "BotCrypto.Core\BotCrypto.Core.csproj", "{43785807-DD49-4354-BF23-D4547C68581C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService_ColetaInformacao", "WorkerService_ColetaInformacao\WorkerService_ColetaInformacao.csproj", "{732B53B0-16B5-4B51-95C2-422D6D250946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{43785807-DD49-4354-BF23-D4547C68581C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43785807-DD49-4354-BF23-D4547C68581C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43785807-DD49-4354-BF23-D4547C68581C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732B53B0-16B5-4B51-95C2-422D6D250946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732B53B0-16B5-4B51-95C2-422D6D250946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732B53B0-16B5-4B51-95C2-422D6D250946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732B53B0-16B5-4B51-95C2-422D6D250946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{58DF61C7-D2FF-4B43-B0DD-67F39FDD1E62} = {E8E15502-C2FA-4BF3-AAEB-78837B937BE8}
 		{1EDE1208-9DDB-4C51-AA63-EFBAB6A0555E} = {FD0C6B80-6530-4BEF-A9E2-D1DB9F149C50}
 		{43785807-DD49-4354-BF23-D4547C68581C} = {EEFCE1B5-A3DE-4841-84CD-552CAEE3918D}
+		{732B53B0-16B5-4B51-95C2-422D6D250946} = {D206B6FD-9E3B-4089-99DF-5F5CC92F9242}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCEB7206-8715-452F-A585-10AE340B17E3}
