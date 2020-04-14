@@ -28,12 +28,14 @@ namespace BotCrypto.ColetaInformacao.Data
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Property("dtCriacao").CurrentValue = DateTime.Now;
+                    entry.Property("DataCriacao").CurrentValue = DateTime.Now;
+                    entry.Property("DataModificacao").CurrentValue = DateTime.Now;
                 }
 
                 if (entry.State == EntityState.Modified)
                 {
-                    entry.Property("dtCriacao").IsModified = false;
+                    entry.Property("DataCriacao").IsModified = false;
+                    entry.Property("DataModificacao").CurrentValue = DateTime.Now;
                 }
             }
 

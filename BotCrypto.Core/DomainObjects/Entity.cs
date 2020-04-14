@@ -5,6 +5,8 @@ namespace BotCrypto.Core.DomainObjects
     public abstract class Entity
     {
         public Guid Id { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public DateTime DataModificacao { get; set; }
 
         protected Entity()
         {
