@@ -11,14 +11,10 @@ namespace BotCrypto.ColetaInformacao.Data
     {
         public ColetaInformacaoContext(DbContextOptions<ColetaInformacaoContext> options) : base(options) { }
 
-        public DbSet<Ticker> Produtos { get; set; }
+        public DbSet<Ticker> Tickers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
-            //    e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
-            //    property.Relational().ColumnType = "varchar(100)";
-
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ColetaInformacaoContext).Assembly);
         }
 
